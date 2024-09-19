@@ -37,7 +37,7 @@
             } else if (seconde > 0) {
                 seconde--;
             }
-            document.getElementById("timerID").innerHTML = minute + " : " + (seconde < 10 ? "0" + seconde : seconde);
+            document.getElementById("timerID").textContent = minute + ":" + (seconde < 10 ? "0" + seconde : seconde);
             if (minute === 0 && seconde === 0) {
                 if(travailler){
                     travailler = false

@@ -1,12 +1,24 @@
 body{
     background-color: #273746;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
 }
 .timer{
-    color: white;
+    color: #d1f2eb;
+    font-size: 500%;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 1000;
 }
 .timer-Container{
-    background-color:#515a5a ;
+    background-color:#5d6d7e ;
     display: flex;
     flex-direction: row;
-    -ms-flex-align: end;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 30vh;
+    border-radius: 20px;
+    box-shadow: 7px 5px 40px #b2babb;
 }
