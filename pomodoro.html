@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PomoDoro</title>
+</head>
+
+<body>
+
+
+    <p id="timerID">25 : 00</p>
+
+    <script>
+        const tempsTravaille = 25;
+        const tempsRepos = 5;
+        let minute = tempsTravaille;
+        let seconde = 0;
+        let travailler = true;
+
+        start()
+        
+        
+        function start(){
+            const interval = setInterval(afficheTime, 1000);
+        }
+
+
+        function afficheTime() {
+            if (seconde === 0 && minute > 0) {
+                minute --;
+                seconde = 59;
+            } else if (seconde > 0) {
+                seconde--;
+            }
+            document.getElementById("timerID").innerHTML = minute + " : " + (seconde < 10 ? "0" + seconde : seconde);
+            if (minute === 0 && seconde === 0) {
+                if(travailler){
+                    travailler = false
+                    minute=tempsRepos
+                    seconde = 0
+                }else{
+                    travailler = true
+                    minute = tempsTravaille
+                    seconde = 0
+                }
+            }
+        }
+
+        
+        
+    </script>
+
+</body>
+
+</html>
