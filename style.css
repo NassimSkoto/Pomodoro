@@ -1,24 +1,121 @@
-body{
+body {
     background-color: #273746;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.timer{
-    color: #d1f2eb;
-    font-size: 500%;
-    font-family: 'Roboto Mono', monospace;
-    font-weight: 1000;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Espace entre le timer et le bouton */
 }
-.timer-Container{
-    background-color:#5d6d7e ;
+
+.timer-Container {
+    background-color: #5d6d7e;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 30vw;
-    height: 30vh;
+    width: 80vw;
+    max-width: 400px; 
+    height: 30vh; 
+    max-height: 300px;
     border-radius: 20px;
     box-shadow: 7px 5px 40px #b2babb;
+    padding: 20px;
+}
+
+
+
+.timer {
+    color: #d1f2eb;
+    font-size: 5rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 1000;
+}
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.inputs-container label, .inputs-container input {
+    color: #d1f2eb;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2rem;
+}
+.inputs-container input {
+    background-color: #5d6d7e;
+    border: none;
+    border-radius: 5px;
+    color: #d1f2eb;
+    padding: 10px;
+    text-align: center;
+    width: 50px;
+}
+/* Style du bouton Démarrer */
+.start-button {
+    background-color: #5d6d7e;
+    color: #d1f2eb;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px #b2babb;
+    transition: background-color 0.3s ease;
+}
+.start-button:hover {
+    background-color: #7b8a97;
+}
+
+.start-button:active {
+    background-color: #4e5d6c;
+}
+.pause-button {
+    margin-top: 20px;
+    background-color: #5d6d7e;
+    color: #d1f2eb;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 3px 3px 10px #b2babb;
+    transition: background-color 0.3s ease;
+}
+
+
+.pause-button:hover {
+    background-color: #7b8a97;
+}
+
+
+.pause-button:active {
+    background-color: #4e5d6c;
+}
+
+@media screen and (max-width: 600px) {
+    .timer {
+        font-size: 3rem; /* Réduit la taille de la police sur les petits écrans */
+    }
+    .timer-Container {
+        width: 90vw; /* Prend presque toute la largeur */
+        height: 30vh; /* Réduit la hauteur du conteneur */
+    }
 }
