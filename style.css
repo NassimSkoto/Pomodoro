@@ -58,7 +58,7 @@ body {
     background-color: #ffffff;
     border: none;
     border-radius: 5px;
-    color: #d1f2eb;
+    color: #000000;
     padding: 10px;
     text-align: center;
     width: 50px;
@@ -131,4 +131,40 @@ body {
         width: 90vw; /* Prend presque toute la largeur */
         height: 30vh; /* Réduit la hauteur du conteneur */
     }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    .title {
+        font-size: 2.5rem; /* Réduit la taille du titre pour les tablettes */
+    }
+
+    .timer {
+        font-size: 8vh; /* Ajuste la taille du timer pour les tablettes */
+    }
+
+    .timer-container {
+        width: 60vw; /* Ajuste la largeur du conteneur du timer */
+        height: 35vh; /* Ajuste la hauteur du conteneur du timer */
+    }
+
+    .inputs-container {
+        gap: 15px; /* Ajuste l'espace entre les inputs */
+    }
+
+    .start-button {
+        padding: 10px 20px; /* Ajuste le padding du bouton de démarrage */
+        font-size: 1.2rem; /* Ajuste la taille du texte du bouton */
+    }
+
+    #settingsButton {
+        font-size: 1.5rem; /* Ajuste la taille de l'icône d'engrenage */
+    }
+}
+
+
+.title {
+    font-size: 3rem; /* Ajuste la taille du texte selon tes préférences */
+    text-align: center;
+    color: #d1f2eb; /* Couleur du texte */
+    margin-bottom: 20px; /* Espace en dessous du titre */
+    font-family: 'Roboto Mono', monospace; /* Assurez-vous que la police est appliquée */
 }
