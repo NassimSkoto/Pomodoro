@@ -4,6 +4,15 @@ let travailler = true;
 let interval;
 let pause = true;
 
+const settingsButton = document.getElementById("settingsButton");
+const settings = document.getElementById("settings");
+
+settingsButton.addEventListener("click", function () {
+    settings.classList.toggle("hidden");
+});
+
+
+
 // Fonction pour démarrer le timer
 function start(tempsTravaille, tempsRepos) {
     clearInterval(interval); // Réinitialiser l'intervalle s'il était déjà en cours

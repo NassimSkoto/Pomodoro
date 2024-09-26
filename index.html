@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<head>  
+<head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/9697122428.js" crossorigin="anonymous"></script>
     <script defer src="scripts.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PomoDoro</title>
-</head> 
+</head>
 
-<body>  
+<body>
     <div class="container">
+
         <!-- Inputs pour sélectionner les temps de travail et de repos -->
-        <div class="inputs-container">
-            <label for="workTime">travail </label>
-            <input type="number" id="workTime" min="1" value="25">
-            
-            <label for="breakTime">repos </label>
-            <input type="number" id="breakTime" min="1" value="5">
+        <button id="settingsButton" aria-label="Paramètres">
+            <i class="fas fa-cog"></i>
+        </button>
+        <div id="settings" class="hidden">
+            <fieldset>
+                <div class="inputs-container">
+                    <label for="workTime">Travail</label>
+                    <input type="number" id="workTime" min="1" value="25">
+
+                    <label for="breakTime">Repos</label>
+                    <input type="number" id="breakTime" min="1" value="5">
+                </div>
+            </fieldset>
         </div>
         
+
         <!-- Timer -->
         <div class="timer-Container">
             <p id="timerID" class="timer">25:00</p>

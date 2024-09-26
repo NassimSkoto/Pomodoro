@@ -31,7 +31,6 @@ body {
 }
 
 
-
 .timer {
     color: #00ff37;
     font-size: 13vh;
@@ -103,10 +102,25 @@ body {
 .pause-button:hover {
     background-color: #c9facd;
 }
-
-
 .pause-button:active {
     background-color: #024702;
+}
+
+
+.hidden {
+    display: none;
+}
+
+#settingsButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem; /* Taille de l'icône */
+    color: #d1f2eb; /* Couleur de l'icône */
+}
+
+#settingsButton:hover {
+    color: #00ff0d; /* Couleur au survol */
 }
 
 @media screen and (max-width: 600px) {
