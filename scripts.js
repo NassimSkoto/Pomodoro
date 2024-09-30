@@ -6,15 +6,15 @@ let pause = true;
 
 const settingsButton = document.getElementById("settingsButton");
 const settings = document.getElementById("settings");
+const body = document.body;
 
 settingsButton.addEventListener("click", function () {
     settings.classList.toggle("hidden");
 });
 
-
 // Fonction pour démarrer le timer
 function start(tempsTravaille, tempsRepos) {
-    clearInterval(interval); // Réinitialiser l'intervalle s'il était déjà en cours
+    clearInterval(interval);
     interval = setInterval(() => {
         afficheTime();
     }, 1000);
@@ -27,7 +27,8 @@ function afficheTime() {
             travailler = !travailler;
             minute = travailler ? parseInt(document.getElementById("workTime").value) : parseInt(document.getElementById("breakTime").value);
             seconde = 0;
-            updateStatusText(); // Mettre à jour le texte ici
+            updateStatusText(); // Mettre à jour le texte de statut
+            updateBackground(); // Mettre à jour la couleur de fond
         }
         if (seconde === 0 && minute > 0) {
             minute--;
@@ -51,6 +52,10 @@ function updateStatusText() {
     statusText.textContent = travailler ? "Mode : Travail" : "Mode : Pause";
 }
 
+// Met à jour la couleur de fond
+function updateBackground() {
+    body.style.backgroundColor = travailler ? "#ff2600" : "#00ccff"; // Rouge pour travail, bleu pour pause
+}
 
 // Fonction pour démarrer ou mettre en pause le timer
 document.getElementById("startButton").addEventListener("click", function () {
@@ -65,6 +70,8 @@ document.getElementById("startButton").addEventListener("click", function () {
     seconde = 0;
     travailler = true;
     updateDisplay();
+    updateStatusText(); // Mettre à jour le texte de statut au démarrage
+    updateBackground(); // Mettre à jour la couleur de fond au démarrage
     start(tempsTravaille, tempsRepos);
     pause = !pause;
     this.innerHTML = pause ? "&#9654;" : "&#x2B6F;";
