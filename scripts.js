@@ -12,7 +12,6 @@ settingsButton.addEventListener("click", function () {
 });
 
 
-
 // Fonction pour démarrer le timer
 function start(tempsTravaille, tempsRepos) {
     clearInterval(interval); // Réinitialiser l'intervalle s'il était déjà en cours
@@ -28,15 +27,14 @@ function afficheTime() {
             travailler = !travailler;
             minute = travailler ? parseInt(document.getElementById("workTime").value) : parseInt(document.getElementById("breakTime").value);
             seconde = 0;
+            updateStatusText(); // Mettre à jour le texte ici
         }
-
         if (seconde === 0 && minute > 0) {
             minute--;
             seconde = 59;
         } else if (seconde > 0) {
             seconde--;
         }
-        
         updateDisplay();
     }
 }
@@ -47,6 +45,13 @@ function updateDisplay() {
         minute + ":" + (seconde < 10 ? "0" + seconde : seconde);
 }
 
+// Met à jour l'affichage du statut (travail/pause)
+function updateStatusText() {
+    const statusText = document.getElementById("statusText");
+    statusText.textContent = travailler ? "Mode : Travail" : "Mode : Pause";
+}
+
+
 // Fonction pour démarrer ou mettre en pause le timer
 document.getElementById("startButton").addEventListener("click", function () {
     const tempsTravaille = parseInt(document.getElementById("workTime").value);
@@ -56,7 +61,6 @@ document.getElementById("startButton").addEventListener("click", function () {
         alert("Veuillez entrer des valeurs valides pour le travail et le repos.");
         return;
     }
-
     minute = tempsTravaille;
     seconde = 0;
     travailler = true;
@@ -65,13 +69,3 @@ document.getElementById("startButton").addEventListener("click", function () {
     pause = !pause;
     this.innerHTML = pause ? "&#9654;" : "&#x2B6F;";
 });
-
-
-
-
-
-
-
-
-
-
