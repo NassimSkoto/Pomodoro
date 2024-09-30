@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
@@ -9,10 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PomoDoro</title>
 </head>
-
 <body>
-    
-
     <div class="container">
         <header>
             <h1 class="title">POMODORO</h1>
@@ -26,7 +22,6 @@
                 <div class="inputs-container">
                     <label for="workTime">Travail</label>
                     <input type="number" id="workTime" min="1" value="25">
-
                     <label for="breakTime">Repos</label>
                     <input type="number" id="breakTime" min="1" value="5">
                 </div>
@@ -37,11 +32,12 @@
         <!-- Timer -->
         <div class="timer-Container">
             <p id="timerID" class="timer">25:00</p>
+            <!-- Ajout du texte pour indiquer si on est en travail ou pause -->
+        <p id="statusText" class="status-text">Mode : Travail</p>
         </div>
-
+    
         <!-- Bouton pour démarrer le timer -->
         <button id="startButton" class="start-button">&#9654;</button>
-
     </div>
 </body>
 
