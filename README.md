@@ -23,11 +23,7 @@ Le Pomodoro Timer est une application web simple qui aide à gérer le temps de 
 
 ## Installation
 
-1. Clonez le dépôt :
-   ```bash
-   git clone https://github.com/NassimSkoto/Pomodoro
 
-   avoir accés au site directement : https://nassimskoto.github.io/Pomodoro/
 
 
 ## Licence
